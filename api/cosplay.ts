@@ -13,7 +13,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
 
     // Randomly select a file
     const randomFile = files[Math.floor(Math.random() * files.length)];
-    const cdnUrl = `${req.headers.host}/lib/cosplayer/${randomFile}`; // Generates CDN-like URL
+    const cdnUrl = `https://${req.headers.host}/lib/cosplayer/${randomFile}`; // Generates CDN-like URL
 
     return res.json({
       data: cdnUrl,
